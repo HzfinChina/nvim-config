@@ -1,0 +1,208 @@
+#=================Markdown syntax
+#================Table
+snippet tab "table" b
+|$1|$2|
+|--|--|
+|$3|$4|
+$0
+endsnippet
+#---------------------------
+###########################
+# Sections and Paragraphs #
+###########################
+snippet sec "Section" b
+# ${1:Section Name} #
+$0
+endsnippet
+
+snippet ssec "Sub Section" b
+## ${1:Section Name} ##
+$0
+endsnippet
+
+snippet sssec "SubSub Section" i
+### ${1:Section Name} ###
+$0
+endsnippet
+
+snippet Par "Paragraph" i
+#### ${1:Paragraph Name} ####
+$0
+endsnippet
+
+snippet spar "Paragraph" i
+##### ${1:Paragraph Name} #####
+$0
+endsnippet
+###################
+# Text formatting #
+###################
+snippet * "italics" i
+*${1:${VISUAL}}*$0
+endsnippet
+
+snippet ** "bold" i
+**${1:${VISUAL}}**$0
+endsnippet
+
+snippet *** "bold italics" i
+***${1:${VISUAL}}***$0
+endsnippet
+
+snippet /* "Comment"
+<!-- ${1:${VISUAL}} -->$0
+endsnippet
+snippet fcolor "color text"
+<font color = ${1:red}>${2:${VISUAL}}</font>$0
+endsnippet
+snippet $2 "Latex environment"
+$$
+$1
+$$
+$0
+endsnippet
+#=================Katex syntax======================
+snippet al "aligned environment"
+$\begin{aligned}$1\end{aligned}$0$
+endsnippet
+snippet eqa "equatoin"
+$$\begin{equation}
+$1
+\end{equation}
+$$
+$0
+endsnippet
+#=========== embrace texts with a box
+snippet box "box a text" i
+\boxed{$1}$0
+endsnippet
+#=========== normal fraction size
+snippet df "normal fraction size in line" i
+\dfrac{$1}{$2}$0
+endsnippet
+#=========== Dot product
+snippet dot "dotproduct" i
+\cdot $0
+endsnippet
+snippet cd "cdotsproduct" i
+\cdots $0
+endsnippet
+snippet vd "verticalproduct" i
+\vdots{$1} $0
+endsnippet
+#==============mathmatical function
+snippet asi "arcsin" i
+\arcsin{$1}$0
+endsnippet
+snippet aco "arccos" i
+\arccos{$1}$0
+endsnippet
+#==============mathmatical symbol
+#squareroot
+snippet roo "squareroot" i
+\sqrt{$1}$0
+endsnippet
+snippet sqr "sqare" i
+($1)^2$0
+endsnippet
+#longequalwithtext
+snippet leq "longequalwithtext" i
+\xlongequal[$1]{$2}$0
+endsnippet
+#fraction
+snippet di "fraction" i
+\frac{${1:${VISUAL}}}{$2}$0
+endsnippet
+# approx
+snippet app "approx" i
+\approx $0
+endsnippet
+# Integral
+snippet int "intergral" i 
+\int_{$1}^{$2}$0
+endsnippet
+# double integral
+snippet iint "double integral" i
+\iint_{$1} $0
+endsnippet
+snippet vec "vec" i
+\vec {$1}$0
+endsnippet
+snippet sum "sum" i
+\sum _{$1}^{$2}$0
+endsnippet
+snippet dom "domain of function" i
+\{($1)\big|$2\}$0
+endsnippet
+# lim
+snippet lim "limit " i
+\lim\limits_{{$1}\to{$2}} $0
+endsnippet
+snippet par "partial" i
+\frac{\partial{$1}}{\partial{$2}}$0
+endsnippet
+snippet arc "arc" i
+\overset{\frown}{$1}$0
+endsnippet
+snippet ov "overline" i
+\overline $0
+endsnippet
+#-------------------
+#==============some alphabet
+snippet vep "varepsilon" i
+\varepsilon $0
+endsnippet 
+snippet Del "Delta" i
+\Delta $0
+endsnippet
+#--------------------
+#================Arrow
+snippet ra "rightarrow" i
+\rightarrow $0
+endsnippet
+# Long right arrow
+snippet lra "longrightarrow" i
+\longrightarrow $0
+endsnippet
+snippet lla "longleftarrow" i
+\longleftarrow $0
+endsnippet
+snippet LRA "Longrightarrow" i
+\Longrightarrow $0
+endsnippet
+snippet LLA "Longleftarrow" i
+\Longleftarrow $0
+endsnippet
+snippet equi "equivalent symbol" i
+\Longleftrightarrow $0
+endsnippet
+#=============Environment
+# Matrix
+snippet mat "smart matrix environment" i
+\begin{${1:p/b/v/V/B/small}matrix}
+${0:${VISUAL}}\end{$1matrix}
+endsnippet
+# cases
+snippet case "quick cases" i
+\begin{cases}${1: 1st equation} \\\
+${2: 2nd equation}\end{cases}$0
+endsnippet
+#align
+snippet ali "align" i
+\begin{align*}
+$1
+\end{align*}$0
+endsnippet
+# bold text
+snippet textbf "bold text" i
+\textbf{$1}$0
+endsnippet
+# large text 
+snippet large "Large text" i 
+\large{$1}$0
+endsnippet
+# color text 
+snippet color "color" i
+\textcolor{${1:red}}{$2} $0
+endsnippet
+#=============================================
